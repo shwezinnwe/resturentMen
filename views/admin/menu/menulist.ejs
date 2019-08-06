@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Food List | Restaurant Management System Admin Template</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <link rel="stylesheet" href="/css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleBasic.css">
+    <!-- responsive CSS
+		============================================ -->
+
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/process.js"></script>
+</head>
+
+<style>
+
+	.product-status{
+		padding-top: 100px;
+	}
+	
+	* {
+	box-sizing: border-box;
+	}
+
+	form.example input[type=text] {
+	border: 1px solid grey;
+	float: left;
+	background: #f1f1f1;
+	}
+
+	form.example button {
+	float: left;
+	background: orange;
+	color: white;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+	}
+</style>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 paddingReset">
+			    <div class="left-sidebar-pro">
+					<nav id="sidebar" class="">
+
+						<ul class="myScroll">
+							<li>
+								<div class="sidebar-header">
+									<a title="Home" href="/admins/home"><img class="main-logo" src="/img/logo/logo13.png" alt="" /></a>
+								</div>
+							</li>
+
+							<li>
+								<div class="left-custom-menu-adp-wrap comment-scrollbar">
+									<nav class="sidebar-nav left-sidebar-menu-pro">
+															
+										<ul class="metismenu" id="menu1">
+
+											<% include ../../partial/navbar %> 
+											
+										</ul>
+									</nav>
+								</div>
+							</li>
+						</ul>
+
+			        </nav>
+			    </div>
+			</div>
+
+			<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 paddingReset">
+
+				    <div class="all-content-wrapper">
+
+				        <div class="header-advance-area">
+				            <div class="header-top-area">
+				                <div class="container-fluid">
+				                    <div class="row">
+
+				                        <div class="col-lg-12 col-md-12 col-sm-11 col-xs-12">
+				                            <div class="header-top-wraper">
+				                                <div class="row marginReset">
+
+	                                				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paddingReset">
+                                						<div class="dropdown">
+                                							<a class="btn dropdown-toggle" data-toggle="dropdown">
+                                								<span class="admin-name"><i class="fa fa-bars"></i></span>
+                                							</a>
+                                							
+                                							<ul id="listdown" role="menu" class="dropdown-menu animated zoomIn myScroll1">
+
+																<% include ../../partial/navbar %>
+
+                                							</ul>
+                                						</div>
+	                                				</div>
+
+                        				            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 paddingReset">
+                        				                <div class="dropdown">
+                        				                    <a data-toggle="dropdown" class="btn dropdown-toggle">
+                        											<i class="fa fa-user-plus adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
+                        											<span class="admin-name">Register Here</span>
+                        											<i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
+                        									</a>
+
+                        				                    <ul class="dropdown-menu animated zoomIn">
+                        				                        <li><a href="/adminDB"><span class="fa fa-home author-log-ic"></span>Register</a>
+                        				                        </li>
+
+                        				                        <li><a href="/login"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+                        				                        </li>
+                        				                    </ul>
+                        				                </div>
+                        				            </div>
+
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+
+				            <!-- {{!-- <div class="breadcome-area">
+				                <div class="container-fluid">
+				                    <div class="row">
+				                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				                            <div class="breadcome-list">
+				                                <div class="row">
+				                                   
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div> --}} -->
+				        </div>
+
+			        	<div class="product-status">
+			        	    <div class="container-fluid">
+			        	        <div class="row">
+			        	            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			        	                <div class="product-status-wrap">
+
+			        	                    
+											
+											<p class="active" style="display: inline-block; width: 100%;">Menu List</p>
+											<br>
+
+											<div class="navbar-form" role="search">
+
+												<div class="pull-right">
+
+													<input id="searchInput" type="text" class="form-control" placeholder="Search Menu Title">
+
+													<select class="form-control" id="searchSelect" >
+														<option selected>Select Category</option>
+														<option value="Fried">Fried</option>
+														<option value="Soup">Soup</option>
+														<option value="Salad">Salad</option>
+														<option value="Curry">Curry</option>
+														<option value="Appetizer">Appetizer</option>
+													</select>
+													
+													<button id="searchBtn" class="form-control btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+
+												</div>
+
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">												
+													
+													<table class="table table-striped" id="myTable">
+													<thead>
+													<tr>
+														<th>Image</th>
+														<th>Title</th>
+														<th>Category</th>
+														<th>Price</th>
+														<th>Status</th>
+														<th>Type</th>
+														<th>Action</th>
+													</tr>
+													</thead>
+
+													<tbody>
+                                                    <% for(var i = 0; i< menus.length; i++){%>
+													<tr>
+														<td> <img src="<%= menus[i].imgUrl %>" alt=""> </td>
+														<td><%= menus[i].title %></td>
+														<td><%= menus[i].category %></td>
+														<td><%= menus[i].price %></td>
+														<td><%= (menus[i].status == '0')? 'Not Available':'Available' %></td>
+														<td><%= (menus[i].type == '0')? 'Breakfast':(menus[i].type == '1')? 'Lunch':'Dinner'  %></td>
+														<td>
+															<a href="/admins/updateMen/<%= menus[i]._id %>" class="btn btn-yellow btn-sm"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+															<a href="/admins/deleteMen/<%= menus[i]._id %>" class="btn btn-yellow btn-sm" onclick="return confirm('Are you sure to delete this record ?')"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+														</td>
+													</tr>
+                                                    <% }%>
+													</tbody>
+													</table>
+
+													<a href="/admins/addmenu" class="btn btn-orange pull-right">Add New Food</a>
+												</div>
+											</div>
+			        	                </div>
+			        	            </div>
+			        	        </div>
+			        	    </div>
+			        	</div>
+
+
+				        <div class="footer footer-copyright-area">
+				        	<div class="footer-copy-right">
+				        		<p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
+				        	</div>				        	
+				        </div>
+
+				    </div>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+
+		document.getElementById('searchBtn').addEventListener('click',searchME)
+
+		function searchME(){
+			var input,sbox,search,search1,table,tr,td,txtValue,txtValue1;
+
+			input = document.getElementById('searchInput').value;
+			search = input.toUpperCase();
+
+			sbox = document.getElementById('searchSelect');
+			search1 = sbox.value.toUpperCase();
+
+			table=document.getElementById("myTable");
+			tr=table.getElementsByTagName("tr");
+
+			if(sbox.selectedIndex == 0)
+			{
+				for(var i=0;i<tr.length;i++)
+				{
+					td=tr[i].getElementsByTagName("td")[2];
+
+					if(td)
+					{
+						txtValue=td.textContent || td.innerText;
+			
+						if(txtValue.toUpperCase().indexOf(search)>-1)
+						{
+							tr[i].style.display="";
+						}
+						
+						else
+						{
+							tr[i].style.display="none";
+						}
+					} 
+				}	
+			}
+
+			else
+			{
+				for(i=0;i<tr.length;i++){
+					td=tr[i].getElementsByTagName("td")[2];
+					td1=tr[i].getElementsByTagName("td")[3];
+
+					if(td && td1)
+					{
+						txtValue=td.textContent || td.innerText;
+						txtValue1=td1.textContent || td1.innerText;
+
+					if(txtValue.toUpperCase().indexOf(search)>-1 && txtValue1.toUpperCase().indexOf(search1)>-1)
+					{
+						tr[i].style.display="";
+					}
+
+					else{
+						tr[i].style.display="none";
+					}
+					} 
+
+				}
+			}
+
+		
+		}
+
+	</script>
+
+</body>
+</html>

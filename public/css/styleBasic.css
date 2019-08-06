@@ -1,0 +1,146 @@
+.marginReset{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+body{
+	background-color: #ffffe6;
+}
+
+.paddingReset {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.footer {
+   /*position: fixed;*/
+   bottom: 0;
+   width: 100%;
+}
+
+.all-content-wrapper{
+	margin-left: 0;
+	background-color: #ffffe6;
+}
+
+.customIMG {
+  width: 1000px;
+  max-height: 550px;
+
+}
+
+.customP {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.customP2 {
+	padding-top: 50px;
+}
+
+.dropdown > .btn{
+	color: white;
+}
+
+.dropdown a:active, .dropdown > a:focus, .dropdown > a:hover {
+	color: white;
+}
+
+.dropdown li  a {
+	padding: 10px 20px;
+	font-size: 14px;
+}
+
+.sidebar-nav .metismenu a:hover, .sidebar-nav .metismenu a:focus, .sidebar-nav .metismenu a:active {
+	background-color: rgba(255, 166, 0, 0.829);
+}
+
+.dropdown li  a:hover, .dropdown li  a:active, .dropdown li  a:focus {
+	background-color: rgba(255, 166, 0, 0.829);
+	color: white;
+}
+
+.active {
+	background-color: rgba(255, 166, 0, 0.829);
+	color: white;
+}
+
+/* .header-right-info ul.header-right-menu li .dropdown-header-top.author-log li a:hover, .header-right-info ul.header-right-menu li .dropdown-header-top.author-log li a:focus, .header-right-info ul.header-right-menu li .dropdown-header-top.author-log li a:active{
+	background-color: #955251;
+	color: white;
+} */
+
+.dropdown-submenu .dropdown-menu > li a{
+	padding: 10px 20px;
+	display: block;
+	font-size: 14px;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+.dropdown > .btn {
+	font-size: 18px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.product-status{
+	padding-bottom: 50px;
+	padding-top: 50px;
+	padding-left: 10px;
+}
+
+.btn-yellow{
+	background: rgb(255, 255, 50);
+	color: red;
+}
+
+.btn-red{
+	background: red;
+	color: white;
+}
+
+.btn-orange{
+	background: orangered;
+	color: white;
+}
+
+a:hover {
+	font-size: 18px;
+}
+
+ul.myScroll{
+	height: 100%;
+	overflow: hidden;
+}
+
+ul.myScroll:hover {
+	overflow: scroll;
+}
+
+ul.myScroll1{
+	height: 200px;
+	overflow: hidden;
+}
+
+ul.myScroll1:hover {
+	overflow: scroll;
+}
+
+p.active{
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+}
+
+.metismenu > li.active > a {
+	color: white;
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Insert New Menu | Restaurant Management System Admin Template</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <link rel="stylesheet" href="/css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleBasic.css">
+    <!-- responsive CSS
+		============================================ -->
+
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/process.js"></script>
+</head>
+
+<style>
+	.single-product-tab-area{
+		padding-top: 100px;
+		padding-bottom: 50px;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	.paddingB30{
+		padding-bottom: 30px;
+	}
+
+	.tab-review-design > li.active {
+		background: white;
+	}
+
+</style>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 paddingReset">
+			    <div class="left-sidebar-pro">
+					<nav id="sidebar" class="">
+
+						<ul class="myScroll">
+							<li>
+								<div class="sidebar-header">
+									<a title="Home" href="/admins/home"><img class="main-logo" src="/img/logo/logo13.png" alt="" /></a>
+								</div>
+							</li>
+
+							<li>
+								<div class="left-custom-menu-adp-wrap comment-scrollbar">
+									<nav class="sidebar-nav left-sidebar-menu-pro">
+															
+										<ul class="metismenu" id="menu1">
+
+											<% include ../../partial/navbar %>
+											
+										</ul>
+									</nav>
+								</div>
+							</li>
+						</ul>
+
+			        </nav>
+			    </div>
+			</div>
+
+			<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 paddingReset">
+
+				    <div class="all-content-wrapper">
+				        <div class="header-advance-area">
+				            <div class="header-top-area">
+				                <div class="container-fluid">
+				                    <div class="row">
+
+				                        <div class="col-lg-12 col-md-12 col-sm-11 col-xs-12">
+				                            <div class="header-top-wraper">
+				                                <div class="row marginReset">
+
+	                                				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paddingReset">
+                                						<div class="dropdown">
+                                							<a class="btn dropdown-toggle" data-toggle="dropdown">
+                                								<span class="admin-name"><i class="fa fa-bars"></i></span>
+                                							</a>
+                                							
+                                							<ul id="listdown" role="menu" class="dropdown-menu animated zoomIn myScroll1">
+
+																<% include ../../partial/navbar %>
+
+                                							</ul>
+                                						</div>
+	                                				</div>
+
+                        				            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 paddingReset">
+                        				                <div class="dropdown">
+                        				                    <a data-toggle="dropdown" class="btn dropdown-toggle">
+                        											<i class="fa fa-user-plus adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
+                        											<span class="admin-name">Register Here</span>
+                        											<i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
+                        									</a>
+
+                        				                    <ul class="dropdown-menu animated zoomIn">
+                        				                        <li><a href="/adminDB"><span class="fa fa-home author-log-ic"></span>Register</a>
+                        				                        </li>
+
+                        				                        <li><a href="/login"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+                        				                        </li>
+                        				                    </ul>
+                        				                </div>
+                        				            </div>
+
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+
+<!--
+				            <div class="breadcome-area">
+				                <div class="container-fluid">
+				                    <div class="row">
+				                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				                            <div class="breadcome-list">
+				                                <div class="row">
+				                                   
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+-->
+				        </div>
+
+				        <div class="single-product-tab-area">
+				            <!-- Single pro tab review Start-->
+				            <div class="single-pro-review-area">
+				                <div class="container-fluid">
+				                    <div class="row">
+				                        <div>
+				                            <div class="review-tab-pro-inner">
+				                                <ul id="myTab3" class="tab-review-design">
+
+				                                    <li class="active"><a href="#description"><i class="fa fa-pencil" aria-hidden="true"></i>Menu List</a></li>
+
+				                                </ul>
+
+												<!-- {{!-- <p class="active" style="display: inline-block; width: 25%;">Food Edit</p> --}} -->
+
+				                                <div id="myTabContent" class="tab-content custom-product-edit">
+				                                	<form action="/admins/updateDri" method="POST" autocomplete="off" id="loginForm" enctype="multipart/form-data">
+														<input type="hidden" name="id" value="<%= drink._id %>">
+
+					                                    <div class="product-tab-list tab-pane fade in" id="description">
+					                                        <div class="row paddingB30">
+					                                        	<div class="col-lg-2 col-md-2"></div>
+
+					                                            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					                                                <div class="review-content-section">
+																		<div class="input-group mg-b-pro-edt">
+					                                                   		<span class="input-group-addon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+					                                                   		<input type="file" class="form-control" name="photo" placeholder="Image" value="">
+																			<div class="text-danger">
+																			</div>
+																		</div>
+
+					                                                    <div class="input-group mg-b-pro-edt">
+					                                                   		<span class="input-group-addon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+					                                                   		<input type="text" class="form-control" name="title" placeholder="Food Title" value="<%= drink.title %>">
+																			<div class="text-danger">
+																			</div>
+																		</div>
+
+																		<div class="input-group mg-b-pro-edt">
+																			<span class="input-group-addon"><i class="fa fa-sticky-note-o" aria-hidden="true"></i></span>
+																			<select class="form-control" name="category" value="">
+																				<option value="" >Choice category</option>
+																				<option value="Soup" <%= (drink.category == "Soup")? "selected":"";  %> >Soup</option>
+																				<option value="Salad" <%= (drink.category == "Salad")? "selected":"";  %> >Salad</option>
+																				<option value="Curry" <%= (drink.category == "Curry")? "selected":"";  %> >Curry</option>
+																				<option value="Fried" <%= (drink.category == "Fried")? "selected":"";  %> >Fried</option>
+                                                                                <option value="Appetizer" <%= (drink.category == "Appetizer")? "selected":"";  %> >Appetizer</option>
+                                                                                <option value="other" <%= (drink.category == "other")? "selected":"";  %> >Other</option>
+																			</select>
+																		</div> 
+
+																		<div class="input-group mg-b-pro-edt">
+																			<span class="input-group-addon"><i class="fa fa-sticky-note-o" aria-hidden="true"></i></span>
+																			<select class="form-control" name="status" value="">
+																				<option value="1" <%= (drink.status == "1")? "selected":"";  %>>Available</option>
+																				<option value="0" <%= (drink.status == "0")? "selected":"";  %>>Not Available</option>
+																			</select>
+																		</div> 
+					                                                    <div class="input-group mg-b-pro-edt">
+					                                                    	<span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+					                                                   		<input type="number" class="form-control" name="price" placeholder="Price" value="<%= drink.price %>">
+																			<div class="text-danger">
+																			</div>
+																		</div>
+					                                                </div>
+					                                            </div>
+
+					                                            <div class="col-lg-2 col-md-2"></div>
+					                                        </div>
+
+					                                        <div class="row paddingB30">
+					                                        	<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+					                                        		<div class="row">
+																		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pull-right">
+					                                        				<a href="/admins/drinklist" class="btn btn-yellow"></i>View All</a>
+					                                        			</div>
+
+																		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pull-right">
+					                                        				<button class="btn btn-yellow" type="reset">Discard </button>
+					                                        			</div>
+
+					                                        			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pull-right">
+					                                        			<button class="btn btn-yellow" type="submit">Update </button>
+					                                        			</div>
+
+
+					                                        		</div>
+					                                        	</div>
+
+					                                        	<div class="col-lg-2 col-md-2"></div>
+					                                        </div>
+				                                           
+				                                    	</div>
+				                                	</form>
+
+				                                </div> 
+				                            </div>
+				                        </div>
+
+				                        <div class="col-lg-2 col-md-2"></div>
+				                    </div>
+
+
+				                </div>
+				            </div>
+				        </div>
+
+				        <div class="footer footer-copyright-area">
+				        	<div class="footer-copy-right">
+				        		<p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
+				        	</div>				        	
+				        </div>
+
+				    </div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Dine IN | Restaurant Management System Admin Template</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap-multiselect.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <link rel="stylesheet" href="/css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleBasic.css">
+    <!-- responsive CSS
+		============================================ -->
+
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+	<script src="/js/process.js"></script>
+	<script src="/javascripts/bootstrap-multiselect.js"></script>
+</head>
+
+<style>
+	.product-status{
+		padding-top: 80px;
+		padding-bottom: 50px;
+	}
+
+	.product-status-wrap{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	
+	.inputBG{
+		background-color: silver;
+	}
+</style>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- {{!-- <div class="col-lg-2 col-2 paddingReset">
+			    <div class="left-sidebar-pro">
+			        <nav id="sidebar" class="">
+			            <div class="sidebar-header">
+			                <a href="/index"><img class="main-logo" src="/img/logo/logo13.png" alt="" /></a>
+			            </div>
+
+			            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+			                <nav class="sidebar-nav left-sidebar-menu-pro">
+			                    <ul class="metismenu" id="menu1">
+			                        <li class="active">
+			                            <a class="has-arrow" class="dropdown-toggle" data-toggle="dropdown">
+										   <i class="fa big-icon fa-cutlery icon-wrap"></i>
+										   <span class="mini-click-non">Admin Dashboard</span>
+										</a>
+
+			                           	<ul class="dropdown-menu">
+
+			                               <li><a title="Food List" href="/admin"><i class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Food List</span></a></li>
+
+			                               <li><a title="Food Edit" href="/admin2"><i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Food Edit</span></a></li>
+			                           
+			                               <li><a title="Food Payment" href="/admin5"><i class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Food Payment</span></a></li> 
+			                            </ul>
+			                                                  
+			                        </li>   
+
+	                                <li class="active">
+	                                    <a class="has-arrow" class="dropdown-toggle" data-toggle="dropdown">
+	    								   <i class="fa big-icon fa-database icon-wrap"></i>
+	    								   <span class="mini-click-non">Summary</span>
+	        							</a>
+
+	                                   	<ul class="dropdown-menu">
+
+	                                       <li><a title="Staff" href="/staff"><i class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Staff</span></a></li>
+
+	                                       <li><a title="Menu" href="/menu"><i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Menu</span></a></li>
+	                                   
+	                                       <li><a title="Voucher" href="/voucher"><i class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Voucher</span></a></li>
+
+	                                       <li><a title="Daily Sale" href="/dailysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Daily Sale</span></a></li>
+
+	                                       <li><a title="Daily Sale" href="/monthlysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Monthly Sale</span></a></li> 
+
+	                                    </ul>
+	                                                          
+	                                </li> 
+			                         
+			                    </ul>
+			                </nav>
+			            </div>
+			        </nav>
+			    </div>
+			</div> --}} -->
+		
+			<!-- {{!-- <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 paddingReset"> --}} -->
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paddingReset">
+
+				    <div class="all-content-wrapper">
+
+				        <div class="header-advance-area">
+				            <div class="header-top-area">
+				                <div class="container-fluid">
+				                    <div class="row">
+
+				                        <div class="col-lg-12 col-md-12 col-sm-11 col-xs-12">
+				                            <div class="header-top-wraper">
+				                                <div class="row marginReset">
+
+	                                				<!-- {{!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 paddingReset">
+                                						<div class="dropdown">
+                                							<a class="btn dropdown-toggle" data-toggle="dropdown">
+                                								<span class="admin-name"><i class="fa fa-bars"></i></span>
+                                							</a>
+                                							
+                                							<ul id="listdown" role="menu" class="dropdown-menu animated zoomIn">
+
+                                								<li>															
+                                									<a href="/index">
+                                										<i class="fa big-icon fa-home icon-wrap"></i>
+                                										<span class="mini-sub-pro">Home</span>
+                                									</a>
+                                								</li>
+
+                                								<li class="dropdown-submenu">
+                                					                <a class="has-arrow test">
+                                									   <i class="fa big-icon fa-cutlery icon-wrap"></i>
+                                									   Admin Dashboard
+                                									   <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
+                                									</a>
+
+                                									<ul class="dropdown-menu">
+                                										<li>
+                                											<a href="/food-list">
+                                												<i class="fa fa-female sub-icon-mg"></i>
+                                												<span class="mini-sub-pro">Food List</span>
+                                											</a>
+                                										</li>
+
+                                										<li>										
+                                											<a href="/food-edit">
+                                												<i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i>
+                                												<span class="mini-sub-pro">Food Edit</span>					
+                                											</a>
+                                										</li>
+
+                                										<li>														
+                                											<a href="/food-payment">
+                                												<i class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i>
+                                												<span class="mini-sub-pro">Food Payment</span>
+                                											</a>
+                                										</li>
+                                									</ul>
+
+                                								</li>
+
+                                								<li class="dropdown-submenu">
+                                					                <a class="has-arrow test">
+                                									   <i class="fa big-icon fa-database icon-wrap"></i>
+                                									   Summary
+                                									   <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
+                                									</a>
+
+                                									<ul class="dropdown-menu">
+                                										<li><a title="Staff" href="/staff"><i class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Staff</span></a></li>
+
+                                										<li><a title="Menu" href="/menu"><i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Menu</span></a></li>
+                                										
+                                										<li><a title="Voucher" href="/voucher"><i class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Voucher</span></a></li>
+
+                                										<li><a title="Daily Sale" href="/dailysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Daily Sale</span></a></li>
+
+                                										<li><a title="Daily Sale" href="/monthlysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Monthly Sale</span></a></li> 
+                                									</ul>
+                                								</li>
+
+                                							</ul>
+                                						</div>
+	                                				</div> --}} -->
+
+													<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5"></div>
+
+                        				            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 paddingReset">
+                        				                <div class="dropdown">
+                        				                    <a data-toggle="dropdown" class="btn dropdown-toggle">
+                        											<i class="fa fa-user-plus adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
+                        											<span class="admin-name">Register Here</span>
+                        											<i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
+                        									</a>
+
+                        				                    <ul class="dropdown-menu animated zoomIn">
+                        				                        <li><a href="/register"><span class="fa fa-home author-log-ic"></span>Register</a>
+                        				                        </li>
+
+                        				                        <li><a href="/login"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+                        				                        </li>
+                        				                    </ul>
+                        				                </div>
+                        				            </div>
+
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+
+				            <!-- {{!-- <div class="breadcome-area">
+				                <div class="container-fluid">
+				                    <div class="row">
+				                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				                            <div class="breadcome-list">
+				                                <div class="row">
+				                                   
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div> --}} -->
+				        </div>
+
+			        	<div class="product-status">
+			        	    <div class="container-fluid">
+			        	        <div class="row">
+			        	            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			        	                <div class="product-status-wrap">
+											<div class="row">
+						  				    	<a href="/waiter1" class="btn btn-yellow pull-right">Back</a>
+							  				</div>
+
+											<div class="row">
+							  					<div id="breakfast">
+							  					    <h2><ins>Breakfast</ins></h2>
+							  					    <br>
+
+							  					        <table class="table-bordered table-responsive">
+															<thead>
+																<tr>
+                                                                        <th>Image</th>
+                                                                        <th>Product</th>
+																		<th>Status</th>
+																		<th>Choose</th>
+																		<th>Price</th>
+                                                                        <th>Qty</th>
+																		<th>Remark</th>
+                                                                        <th>Setting</th>
+																</tr>
+															</thead>
+															
+															<tbody>
+                                                                    <% for(var i =0; i< menus.length; i++){%>
+                                                                        <% if(menus[i].type != '0') continue; %>
+                                                                        <tr>
+																			<td><img src="<%= menus[i].imgUrl %>" class="/img img-responsive customImg"/></td>
+																			<td><%= menus[i].title %></td>
+																			<td>
+																				<% if(menus[i].status == '0'){%>
+																					<a  class="btn btn-danger">Not Available</a>
+																				<%}else{%>
+																					<a  class="btn btn-success">Available</a>
+																				<%}%>
+																			</td>
+																			<input type="hidden" name="count">
+																			<td><input type="checkbox" <% if(menus[i].status == '0'){%> disabled <%} %> onchange="fun('<%= menus[i]._id%>',<%=i%>)" value="<%= menus[i]._id%>">Yes</td>
+																			<td><%= menus[i].price %></td>
+																			<td><input type="number" min="1" id="count<%=i%>"value="1" class="inputBG"></td>
+																			<td>
+																				<b>Low</b>
+																				<div>
+																					
+																					<select class="example-getting-started" id="low<%=i%>" multiple="multiple">
+																							<option value="salt">Salt</option>
+																							<option value="oil">Oil</option>
+																							<option value="spicy">Spicy</option>
+																							<option value="acho">Chicken Powder</option>
+																						</select>
+																						
+																					<input type="text" id="apo<%=i%>" class="inputBG">
+																				</div>
+																			</td>
+																			<td>
+																				<a data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i></a>
+		
+																				<a data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></a>
+																			</td>
+																		</tr>
+                                                                <%}%>
+
+															</tbody>
+
+														  </table>
+														</div>
+
+							  					        <!-- <table class="table-bordered table-responsive">
+							  					            <br><br>
+							  					            <h2><ins>Drinks</ins></h2><br>
+
+							  					            <thead>
+							  					            	<tr>
+							  					            	    <th>Product</th>
+							  					            	    <th>Status</th>
+							  					            	    <th>Choose</th>
+							  					            	    <th>Price</th>
+							  					            	    <th>Qty</th>
+							  					            	</tr>
+							  					            </thead>
+
+							  					            <tbody>
+                                                                    <% for(var j = 0; j < drinks.length; j++){%>
+							  					            	<tr>
+							  					            	    <td>
+							  					            	    	<img src="<%= drinks[j].imgUrl %>" alt="" class="customImg" />
+							  					            	    	<label><%= drinks[j].title %></label>
+							  					            	    </td>
+							  					            	    <td>
+																			<% if(drinks[j].status == '0'){%>
+																				<a  class="btn btn-danger">Not Available</a>
+																			<%}else{%>
+																				<a  class="btn btn-success">Available</a>
+																			<%}%>
+							  					            	    </td>
+																	  <td><input type="checkbox" <% if(drinks[j].status == '0'){%> disabled <%} %> onchange="fun2('<%= drinks[j]._id%>',<%=j%>)" >Yes</td>
+							  					            	    <td><%= drinks[j].price %></td>
+							  					            	    <td><input type="number" value="1" min="1" id="countD<%=j%>" class="inputBG"></td>
+							  					            	</tr>
+                                                                <%}%>
+							  					            	
+
+							  					            </tbody>
+							  					        </table>
+
+							  					        <br>  
+							  					        <!-- {{!-- <input type="submit" class="btn btn-danger pull-right" value="Order"> --}} -->
+														<!-- <button type="submit" class="btn btn-warning pull-right">Order</button> --> -->
+							  					    
+							  					
+
+							  					<div id="lunch">
+							  					    <h2><ins>Lunch</ins></h2><br>
+							  					        <table class="table-bordered table-responsive">
+							  					        	<thead>
+							  					        		<tr>
+							  					        		    <th>Image</th>
+							  					        		    <th>Product</th>
+																	<th>Status</th>
+																	<th>Choose</th>
+																	<th>Price</th>
+							  					        		    <th>Qty</th>
+																	<th>Remark</th>
+							  					        		    <th>Setting</th>
+
+							  					        		</tr>
+							  					        	</thead>
+
+															<tbody>
+                                                                    <% for(var i =0; i< menus.length; i++){%>
+                                                                        <% if(menus[i].type != '1') continue; %>
+                                                                        <tr>
+                                                                                <td><img src="<%= menus[i].imgUrl %>" class="/img img-responsive customImg"/></td>
+                                                                                <td><%= menus[i].title %></td>
+                                                                                <td>
+																					<% if(menus[i].status == '0'){%>
+																						<a  class="btn btn-danger">Not Available</a>
+																					<%}else{%>
+																						<a  class="btn btn-success">Available</a>
+																					<%}%>
+																				</td>
+																				<input type="hidden" name="count">
+                                                                                <td><input type="checkbox" <% if(menus[i].status == '0'){%> disabled <%} %> onchange="fun('<%= menus[i]._id%>',<%=i%>)" value="<%= menus[i]._id%>">Yes</td>
+                                                                                <td><%= menus[i].price %></td>
+                                                                                <td><input type="number" min="1" id="count<%=i%>"value="1" class="inputBG"></td>
+                                                                                <td>
+                                                                                    <b>Low</b>
+                                                                                    <div>
+                                                                                        
+																						<select class="example-getting-started" id="low<%=i%>" multiple="multiple">
+																								<option value="salt">Salt</option>
+																								<option value="oil">Oil</option>
+																								<option value="spicy">Spicy</option>
+																								<option value="acho">Chicken Powder</option>
+																							</select>
+																							
+                                                                                        <input type="text" id="apo<%=i%>" class="inputBG">
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i></a>
+            
+                                                                                    <a data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></a>
+                                                                                </td>
+                                                                            </tr>
+                                                                <%}%> 
+
+																
+															</tbody>
+
+														  </table>
+							  					</div>
+
+														<!-- <table class="table-bordered table-responsive">
+														    <br><br>
+														    <h2><ins>Drinks</ins></h2><br>
+
+														    <thead>
+														    	<tr>
+														    	    <th>Product</th>
+														    	    <th>Status</th>
+														    	    <th>Choose</th>
+														    	    <th>Price</th>
+														    	    <th>Qty</th>
+														    	</tr>
+														    </thead>
+
+														    <tbody>
+                                                                    <% for(var j = 0; j < drinks.length; j++){%>
+                                                                        <tr>
+                                                                                <td>
+                                                                                    <img src="<%= drinks[j].imgUrl %>" alt="" class="customImg" />
+                                                                                    <label><%= drinks[j].title %></label>
+                                                                                </td>
+                                                                                <td>
+																						<% if(drinks[j].status == '0'){%>
+																							<a  class="btn btn-danger">Not Available</a>
+																						<%}else{%>
+																							<a  class="btn btn-success">Available</a>
+																						<%}%>
+                                                                                </td>
+                                                                                <td><input type="checkbox" <% if(drinks[j].status == '0'){%> disabled <%} %> onchange="fun2('<%= drinks[j]._id%>',<%=j%>)" >Yes</td>
+                                                                                <td><%= drinks[j].price %></td>
+                                                                                <td><input type="number" value="1" min="1" id="countD<%=j%>" class="inputBG"></td>
+                                                                            </tr>
+																	<%}%>
+																	
+																	
+
+														    </tbody>
+
+														</table>
+
+							  					        <br> -->
+
+							  					        <!-- {{!-- <input type="submit" class="btn btn-danger pull-right" value="Order"> --}} -->
+														
+														<!-- <button type="button" class="btn btn-warning pull-right">Order</button>
+														
+							  					    
+                                                  </div> -->
+                                                  <div id="dinner">
+                                                        <h2><ins>Dinner</ins></h2><br>
+                                                            <table class="table-bordered table-responsive">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Image</th>
+                                                                        <th>Product</th>
+																		<th>Status</th>
+																		<th>Choose</th>
+																		<th>Price</th>
+                                                                        <th>Qty</th>
+																		<th>Remark</th>
+                                                                        <th>Setting</th>
+  
+                                                                    </tr>
+                                                                </thead>
+  
+                                                              <tbody>
+                                                                  <% for(var i =0; i< menus.length; i++){%>
+                                                                    <% if(menus[i].type != '2') continue; %>
+                                                                  <tr>
+                                                                      <td><img src="<%= menus[i].imgUrl %>" class="/img img-responsive customImg"/></td>
+                                                                      <td><%= menus[i].title %></td>
+                                                                      <td>
+																			<% if(menus[i].status == '0'){%>
+																				<a  class="btn btn-danger">Not Available</a>
+																			<%}else{%>
+																				<a  class="btn btn-success">Available</a>
+																			<%}%>
+																	  </td>
+																	  <input type="hidden" name="count">
+																	  <td><input type="checkbox" <% if(menus[i].status == '0'){%> disabled <%} %> onchange="fun('<%= menus[i]._id%>',<%=i%>)" value="<%= menus[i]._id%>">Yes</td>
+                                                                      <td><%= menus[i].price %></td>
+																	  <td><input type="number" min="1" id="count<%=i%>"value="1" class="inputBG"></td>
+                                                                      <td>
+                                                                          <b>Low</b>
+                                                                          <div>
+																				<select class="example-getting-started" id="low<%=i%>" multiple="multiple">
+																						<option value="salt">Salt</option>
+																						<option value="oil">Oil</option>
+																						<option value="spicy">Spicy</option>
+																						<option value="acho">Chicken Powder</option>
+																					</select>
+																					<input type="text" id="apo<%=i%>" class="inputBG">
+                                                                          </div>
+                                                                      </td>
+                                                                      <td>
+                                                                          <a data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i></a>
+  
+                                                                          <a data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></a>
+                                                                      </td>
+                                                                  </tr>
+                                                                <%}%>
+                                                                  
+                                                              </tbody>
+  
+                                                            </table>
+														</div>
+                                                          <table class="table-bordered table-responsive">
+                                                              <br><br>
+                                                              <h2><ins>Drinks</ins></h2><br>
+  
+                                                              <thead>
+                                                                  <tr>
+                                                                      <th>Product</th>
+                                                                      <th>Status</th>
+                                                                      <th>Choose</th>
+                                                                      <th>Price</th>
+                                                                      <th>Qty</th>
+                                                                  </tr>
+                                                              </thead>
+  
+                                                              <tbody>
+                                                                  <% for(var j = 0; j < drinks.length; j++){%>
+                                                                    <tr>
+                                                                            <td>
+                                                                                <img src="<%= drinks[j].imgUrl %>" alt="" class="customImg" />
+                                                                                <label><%= drinks[j].title %></label>
+                                                                            </td>
+                                                                            <td>
+																					<% if(drinks[j].status == '0'){%>
+																						<a  class="btn btn-danger">Not Available</a>
+																					<%}else{%>
+																						<a  class="btn btn-success">Available</a>
+																					<%}%>
+                                                                            </td>
+																			<td><input type="checkbox" <% if(drinks[j].status == '0'){%> disabled <%} %> onchange="fun2('<%= drinks[j]._id%>',<%=j%>)" >Yes</td>
+                                                                            <td><%= drinks[j].price %></td>
+																			<td><input type="number" min="1" id="countD<%=j%>" class="inputBG"></td>
+                                                                        </tr>
+                                                                <%}%>
+                                                                  
+  
+                                                              </tbody>
+  
+                                                          </table>
+  
+                                                            <br>
+  
+                                                            <!-- {{!-- <input type="submit" class="btn btn-danger pull-right" value="Order"> --}} -->
+                                                          
+                                                          <button type="submit" class="btn btn-warning pull-right">Order</button>
+                                                          
+                                                    
+											</div>
+
+							  				<!-- {{!-- <br><br>
+
+							  				<div class="row">
+						  				    	<a href="/waiter1" class="btn btn-warning pull-right">Back</a>
+							  				</div> --}} -->
+			        	                </div>
+			        	            </div>
+			        	        </div>
+			        	    </div>
+			        	</div>
+
+
+				        <div class="footer footer-copyright-area">
+				        	<div class="footer-copy-right">
+				        		<p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
+				        	</div>				        	
+				        </div>
+
+				    </div>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function (){
+
+			var date=new Date();
+			var hr=date.getHours();
+
+			if(hr<12)
+			{
+			    $("#breakfast").hide();
+                $("#lunch").show();
+                $("#dinner").hide();
+			}
+
+			else if(hr>= 12 && hr <=18)
+			{
+			    $("#lunch").show();
+                $("#breakfast").hide();
+                $('#dinner').hide();
+			}else{
+                $("#dinner").hide();
+                $("#breakfast").hide();
+                $('#lunch').show();
+            }
+			$('.example-getting-started').multiselect();
+		});
+
+		// $('.order').change(function(){
+		// 	alert('aa');
+		// })
+		var menu = [];
+		var drink = [];
+		
+		function fun(id,i){
+			var data = {};
+			Object.assign(data,{id:id},{low:$('#low'+i).val()},{count:$('#count'+i).val()},{apo:$('#apo'+i).val()});
+			var index = menu.findIndex(x => x.id === id);
+			console.log('....>>>',index);
+			if (index > -1) {
+				menu.splice(index, 1);
+				}else{
+					menu.push(data)
+				}
+			console.log(menu);
+		}
+		function fun2(id,i){
+			console.log(i,$('#countD'+i).val())
+			var data2 = {};
+			Object.assign(data2,{id,id},{count:$('#countD'+i).val()});
+			var index = drink.findIndex(x => x.id === id);
+			if (index > -1){
+				drink.splice(index, 1);
+			}else{
+				drink.push(data2);
+			}
+			console.log(drink)
+		}
+
+		const Url = "/waiters/order";
+		var data = {
+			menu : menu,
+			drink : drink
+		}
+		$('.btn').click(function(){
+			$.ajax({
+				url:Url,
+				type :'POST',
+				data :JSON.stringify(data),
+  				contentType: "application/json; charset=utf-8",
+  				dataType: "json",
+				error: function() {
+					alert("Error");
+				},
+				success: function() {
+					alert("OK");
+				}
+			})
+		})
+
+	</script>
+
+</body>
+</html>
