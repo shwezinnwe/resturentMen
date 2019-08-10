@@ -65,7 +65,7 @@
 </head>
 
 <style>
-	
+
 	.inputBG{
 		background-color: rgb(203, 235, 253);
 		width: 100%;
@@ -109,11 +109,11 @@
 			                               <li><a title="Food List" href="/admin"><i class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Food List</span></a></li>
 
 			                               <li><a title="Food Edit" href="/admin2"><i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Food Edit</span></a></li>
-			                           
-			                               <li><a title="Food Payment" href="/admin5"><i class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Food Payment</span></a></li> 
+
+			                               <li><a title="Food Payment" href="/admin5"><i class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Food Payment</span></a></li>
 			                            </ul>
-			                                                  
-			                        </li>   
+
+			                        </li>
 
                                     <li class="active">
                                         <a class="has-arrow" class="dropdown-toggle" data-toggle="dropdown">
@@ -126,17 +126,17 @@
                                            <li><a title="Staff" href="/staff"><i class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Staff</span></a></li>
 
                                            <li><a title="Menu" href="/menu"><i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Menu</span></a></li>
-                                       
+
                                            <li><a title="Voucher" href="/voucher"><i class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Voucher</span></a></li>
 
                                            <li><a title="Daily Sale" href="/dailysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Daily Sale</span></a></li>
 
-                                           <li><a title="Daily Sale" href="/monthlysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Monthly Sale</span></a></li> 
+                                           <li><a title="Daily Sale" href="/monthlysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Monthly Sale</span></a></li>
 
                                         </ul>
-                                                              
-                                    </li> 
-			                         
+
+                                    </li>
+
 			                    </ul>
 			                </nav>
 			            </div>
@@ -163,10 +163,10 @@
                                 							<a class="btn dropdown-toggle" data-toggle="dropdown">
                                 								<span class="admin-name"><i class="fa fa-bars"></i></span>
                                 							</a>
-                                							
+
                                 							<ul id="listdown" role="menu" class="dropdown-menu animated zoomIn">
 
-                                								<li>															
+                                								<li>
                                 									<a href="/index">
                                 										<i class="fa big-icon fa-home icon-wrap"></i>
                                 										<span class="mini-sub-pro">Home</span>
@@ -188,14 +188,14 @@
                                 											</a>
                                 										</li>
 
-                                										<li>										
+                                										<li>
                                 											<a href="/food-edit">
                                 												<i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i>
-                                												<span class="mini-sub-pro">Food Edit</span>					
+                                												<span class="mini-sub-pro">Food Edit</span>
                                 											</a>
                                 										</li>
 
-                                										<li>														
+                                										<li>
                                 											<a href="/food-payment">
                                 												<i class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i>
                                 												<span class="mini-sub-pro">Food Payment</span>
@@ -216,12 +216,12 @@
                                 										<li><a title="Staff" href="/staff"><i class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Staff</span></a></li>
 
                                 										<li><a title="Menu" href="/menu"><i class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Menu</span></a></li>
-                                										
+
                                 										<li><a title="Voucher" href="/voucher"><i class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Voucher</span></a></li>
 
                                 										<li><a title="Daily Sale" href="/dailysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Daily Sale</span></a></li>
 
-                                										<li><a title="Daily Sale" href="/monthlysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Monthly Sale</span></a></li> 
+                                										<li><a title="Daily Sale" href="/monthlysale"><i class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Monthly Sale</span></a></li>
                                 									</ul>
                                 								</li>
 
@@ -262,7 +262,7 @@
 				                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				                            <div class="breadcome-list">
 				                                <div class="row">
-				                                   
+
 				                                </div>
 				                            </div>
 				                        </div>
@@ -281,52 +281,35 @@
 							  				</div>
 
 				                        	<div class="row">
-				                        		<h1>Orders</h1>
+				                        		<h1>Orders Detail</h1>
 				                        	</div>
-				                        	
+
 				                        	<br>
 
-				                        	<div class="row">	
+				                        	<div class="row">
 					                        	<table class="table-bordered table-responsive" id="dataTable">
 
 					                        	    <thead>
 					                        	        <tr>
 					                        	            <th>No</th>
-					                        	            <th>Menu_ID</th>
-					                        	            <th>Qty</th>
-					                        	            <th>Remark</th>
-					                        	            <th>Start</th>
-					                        	            <th>Finish</th>
+					                        	            <th>Order_ID</th>
+					                        	            <th>Ordered Table</th>
+					                        	            <th>Status</th>
+																								<th>Detail</th>
 					                        	        </tr>
 					                        	    </thead>
 
 					                        	    <tbody>
+																					<% for(var i = 0; i< orders.length; i++){%>
 					                        	        <tr>
-					                        	            <td>1</td>
-					                        	            <td>M1</td>
-					                        	            <td>3</td>
-					                        	            <td><input type="text" class="inputBG"></td>
-					                        	            <td><a href="#" class="btn btn-yellow" value="start">Start</td>
-					                        	            <td><a href="#" class="btn btn-orange" value="finish">Finish</td>
+					                        	            <td><%= i+1 %></td>
+					                        	            <td><%= orders[i]._id %></td>
+					                        	            <td>Table <%= orders[i].tableNo %></td>
+					                        	            <td><%= (orders[i].status == '0')? 'Order' :(orders[i].status == '1')? 'Cooking' : (orders[i].status == '2')? 'Finish' : 'Complete' %></td>
+																								<td><a href="/kitchens/orderdetail/<%= orders[i]._id %>"class="btn btn-orange" value="finish">Detail</a></td>
 					                        	        </tr>
 
-					                        	        <tr>
-					                        	            <td>2</td>
-					                        	            <td>M4</td>
-					                        	            <td>2</td>
-					                        	            <td><input type="text" class="inputBG"></td>
-					                        	            <td><a href="#" class="btn btn-yellow" value="start">Start</td>
-					                        	            <td><a href="#" class="btn btn-orange" value="finish">Finish</td>
-					                        	        </tr>
-
-					                        	        <tr>
-					                        	            <td>3</td>
-					                        	            <td>M6</td>
-					                        	            <td>1</td>
-					                        	            <td><input type="text" class="inputBG"></td>
-					                        	            <td><a href="#" class="btn btn-yellow" value="start">Start</td>
-					                        	            <td><a href="#"class="btn btn-orange" value="finish">Finish</td>
-					                        	        </tr>
+																					<%}%>
 					                        	    </tbody>
 
 					                        	</table>
@@ -334,9 +317,7 @@
 
 					                        <br>
 
-				                        	<!-- {{!-- <div class="row">
-				                        		<a href="/index" class="btn btn-warning pull-right">Return Home</a>
-				                        	</div>				                        	 --}} -->
+				                        	
 
 				                        </div>
 				                    </div>
@@ -347,7 +328,7 @@
 				        <div class="footer footer-copyright-area">
 				        	<div class="footer-copy-right">
 				        		<p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
-				        	</div>				        	
+				        	</div>
 				        </div>
 
 				    </div>
