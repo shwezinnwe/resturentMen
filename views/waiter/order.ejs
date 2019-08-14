@@ -380,7 +380,7 @@
 
 							  					        <br>
 							  					        <!-- {{!-- <input type="submit" class="btn btn-danger pull-right" value="Order"> --}} -->
-														<!-- <button type="submit" class="btn btn-warning pull-right">Order</button> --> -->
+														<!-- <button type="submit" class="btn btn-warning pull-right">Order</button> -->
 
 
 
@@ -527,7 +527,7 @@
 																	  <input type="hidden" name="count">
 																	  <td><input type="checkbox" <% if(menus[i].status == '0'){%> disabled <%} %> onchange="fun('<%= menus[i]._id%>',<%=i%>)" value="<%= menus[i]._id%>">Yes</td>
                                                                       <td><%= menus[i].price %></td>
-																	  <td><input type="number" min="1" id="count<%=i%>"value="1" class="inputBG"></td>
+																	  <td><input type="number" min="1" id="count<%=i%>" value="1" class="inputBG"></td>
                                                                       <td>
                                                                           <b>Low</b>
                                                                           <div>
@@ -582,7 +582,7 @@
                                                                             </td>
 																			<td><input type="checkbox" <% if(drinks[j].status == '0'){%> disabled <%} %> onchange="fun2('<%= drinks[j]._id%>',<%=j%>)" >Yes</td>
                                                                             <td><%= drinks[j].price %></td>
-																			<td><input type="number" min="1" id="countD<%=j%>" class="inputBG"></td>
+																			<td><input type="number" min="1" id="countD<%=j%>" value="1" class="inputBG"></td>
                                                                         </tr>
                                                                 <%}%>
 

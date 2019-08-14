@@ -293,7 +293,7 @@
 																						<tr>
                                             <td><%= i+1 %></td>
                                             <td><%= order.menus[i].menu_id.title %></td>
-                                            <td><%= order.menus[i].low.toString() %></td>
+                                            <td><%= (order.menus[i].low != null)? order.menus[i].low.toString():'' %></td>
                                             <td><%= order.menus[i].count %></td>
                                             <td><%= order.menus[i].apo %></td>
 																					</tr>

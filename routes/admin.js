@@ -102,7 +102,7 @@ router.get('/menulist',(req,res)=>{
     if(err) throw err;
     res.render('admin/menu/menulist',{menus:rtn});
   })
-  
+
 })
 
 router.get('/updateMen/:id',(req,res)=>{
@@ -124,7 +124,7 @@ router.post('/updateMen',upload.single('photo'), (req,res)=>{
   Menu.findByIdAndUpdate(req.body.id,{$set:update},(err,rtn)=>{
     if(err) throw err;
     res.redirect('/admins/menulist');
-  }) 
+  })
 })
 
 router.get('/deleteMen/:id',(req,res)=>{
@@ -156,7 +156,7 @@ router.get('/drinklist',(req,res)=>{
     if(err) throw err;
     res.render('admin/drink/drinklist',{drinks:rtn});
   })
-  
+
 })
 
 router.get('/updateDri/:id',(req,res)=>{
@@ -177,7 +177,7 @@ router.post('/updateDri',upload.single('photo'), (req,res)=>{
   Drink.findByIdAndUpdate(req.body.id,{$set:update},(err,rtn)=>{
     if(err) throw err;
     res.redirect('/admins/drinklist');
-  }) 
+  })
 })
 
 router.get('/deleteDri/:id',(req,res)=>{
