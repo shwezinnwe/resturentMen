@@ -99,11 +99,11 @@
 							<li>
 								<div class="left-custom-menu-adp-wrap comment-scrollbar">
 									<nav class="sidebar-nav left-sidebar-menu-pro">
-															
+
 										<ul class="metismenu" id="menu1">
 
 												<% include ../partial/navbar %>
-											
+
 										</ul>
 									</nav>
 								</div>
@@ -131,7 +131,7 @@
                                 							<a class="btn dropdown-toggle" data-toggle="dropdown">
                                 								<span class="admin-name"><i class="fa fa-bars"></i></span>
                                 							</a>
-                                							
+
                                 							<ul id="listdown" role="menu" class="dropdown-menu animated zoomIn myScroll1">
 
 																	<% include ../partial/navbar %>
@@ -165,71 +165,90 @@
 				                </div>
 				            </div>
 
-				            <!-- {{!-- <div class="breadcome-area">
+				            <div class="breadcome-area">
 				                <div class="container-fluid">
 				                    <div class="row">
 				                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				                            <div class="breadcome-list">
 				                                <div class="row">
-				                                   
+
 				                                </div>
 				                            </div>
 				                        </div>
 				                    </div>
 				                </div>
-				            </div> --}} -->
+				            </div>
 				        </div>
 
 				        <div class="product-status">
 				            <div class="container-fluid">
-				                <div class="row">
-				                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				                        <div class="product-status-wrap">
 
-				                        	<div class="row paddingLR">
 
-												<p class="active" style="display: inline-block; width: 100%;">Admin Table</p>
-												<!-- {{!-- <h2 class="active" style="display: inline-block; width: auto;">Admin Table</h2> --}} -->
-												
-												<br><br>
-												
-												<table class="table table-striped">
-												<thead>
-												<tr>
-													<th>Admin ID</th>
-													<th>Staff ID</th>
-													<th>Email</th>
-													<th>Password</th>
-													<th>Confirm Password</th>
-													<th></th>
-												</tr>
-												</thead>
+													<div class="col-md-12">
 
-												<tbody>
-												<tr>
-													<td>{{this.adminID}}</td>
-													<td>{{this.staffID}}</td>
-													<td>{{this.email}}</td>
-													<td>{{this.psw1}}</td>
-													<td>{{this.psw2}}</td>
-													<td>
-														<a href="/adminDB/{{this._id}}" class="btn btn-yellow btn-sm"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
-														<a href="/adminDB/delete/{{this._id}}" class="btn btn-yellow btn-sm" onclick="return confirm('Are you sure to delete this record ?')"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
-													</td>
-												</tr>
-												</tbody>
-												</table>
-				                        	</div>
-                    			        </div>
-                    			    </div>
-	                    		</div>
+	 													<div class="row">
+	 				                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	 				                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+	 				                                <h4 class="text-left text-uppercase">Total Staff</h4>
+	 				                                <div class="row vertical-center-box vertical-center-box-tablet">
+
+	 				                                </div>
+	 				                                 <div class="progress progress-mini">
+	 				                                    <div style="width: 100%;" class="progress-bar bg-red"></div>
+
+	 				                                </div>
+																					<h3 class="text-right"><%= staff %></h3>
+	 				                            </div>
+	 				                        </div>
+
+	 				                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	 				                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+	 				                                <h4 class="text-left text-uppercase"><b>Total Menu</b></h4>
+	 				                                <div class="row vertical-center-box vertical-center-box-tablet">
+
+	 				                                </div>
+	 				                                <div class="progress progress-mini">
+	 				                                    <div style="width: 100%;" class="progress-bar bg-purple"></div>
+	 				                                </div>
+																					<h3 class="text-right"><%= menu %></h3>
+	 				                            </div>
+	 				                        </div>
+
+	 				                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	 				                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+	 				                                <h4 class="text-left text-uppercase"><b>Total Drinks</b></h4>
+	 				                                <div class="row vertical-center-box vertical-center-box-tablet">
+
+	 				                                </div>
+	 				                                 <div class="progress progress-mini">
+	 				                                    <div style="width: 100%;" class="progress-bar bg-green"></div>
+	 				                                </div>
+																					<h3 class="text-right"><%= drink %></h3>
+	 				                            </div>
+	 				                        </div>
+
+	 										<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	 				                            <div class="admin-content analysis-progrebar-ctn res-mg-t-30">
+	 				                                <h4 class="text-left text-uppercase"><b>Total Orders</b></h4>
+	 				                                <div class="row vertical-center-box vertical-center-box-tablet">
+
+	 				                                </div>
+	 				                                <div class="progress progress-mini">
+	 				                                    <div style="width: 100%;" class="progress-bar bg-orange"></div>
+	 				                                </div>
+																					<h3 class="text-right"><%= order %></h3>
+	 				                            </div>
+	 				                        </div>
+
+	 				                    </div>
+	 				                </div>
 	                    	</div>
 	                    </div>
 
 				        <div class="footer footer-copyright-area">
 				        	<div class="footer-copy-right">
 				        		<p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
-				        	</div>				        	
+				        	</div>
 				        </div>
 
 				    </div>
@@ -237,6 +256,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 </body>
 </html>

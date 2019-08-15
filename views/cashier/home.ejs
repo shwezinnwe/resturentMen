@@ -345,6 +345,8 @@
 		$('#tab_all').show();
 		$('#check').show();
 		$('#pri').show();
+		$("#menutab tbody").empty();
+		$("#drinktab tbody").empty();
 		$.ajax({
 			url:'/cashiers/ordersigle',
 			type :'POST',

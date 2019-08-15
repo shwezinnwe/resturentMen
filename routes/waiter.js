@@ -12,7 +12,17 @@ router.get('/login', function(req, res, next) {
 
 router.get('/home', function(req,res,next){
   Order.find({$or:[{status:2},{status:3}]},(err,rtn)=>{
-    res.render('waiter/home',{orders:rtn})
+    if(err) throw err;
+    Order.find({status:{$ne: 4}},{tableNo:1,_id:0},function (err2,rtn2) {
+      if(err2) throw err2;
+      var tno =[];
+      for (var i = 0; i < rtn2.length; i++) {
+        tno.push(rtn2[i].tableNo);
+      }
+      console.log(tno);
+      res.render('waiter/home',{orders:rtn,tno:tno})
+    })
+
   });
 });
 

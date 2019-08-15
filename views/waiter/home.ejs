@@ -305,7 +305,11 @@
 																	 <%}%>
 
 							  					            <div class="col-md-3 col-sm-3 col-xs-3">
+																				<% if(tno.includes((i+1).toString())){%>
+																					<button type="button" name="button" class="btn btn-danger">Table-<%= i+1 %></button>
+																				<%}else{%>
 							  					                <a href="/waiters/order/<%= i+1 %>" id="test" class="btn btn-success">Table-<%= i+1 %></a>
+																					<%}%>
 							  					            </div>
 
 														<%}%>

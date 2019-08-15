@@ -4,6 +4,7 @@ var Admin = require('../model/Admin');
 var Staff = require('../model/Staff');
 var Menu = require('../model/Menu');
 var Drink = require('../model/Drink');
+var Order = require('../model/Order');
 var bcrypt = require('bcrypt');
 var multer = require('multer');
 var upload = multer({ dest:'public/images/uploads'});
@@ -188,7 +189,21 @@ router.get('/deleteDri/:id',(req,res)=>{
 })
 
 router.get('/home', function(req,res,next){
-    res.render('admin/home')
+    Staff.count({},(err,rtn)=>{
+      if(err) throw err;
+      console.log(rtn);
+      Menu.count({},(err2,rtn2)=>{
+        if(err2) throw err2;
+        Drink.count({},(err3,rtn3)=>{
+          if(err3) throw err3;
+          Order.count({},(err4,rtn4)=>{
+            if(err4) throw err4;
+            res.render('admin/home',{order:rtn4,drink:rtn3,menu:rtn2,staff:rtn});
+          })
+        })
+      })
+    })
+
 });
 
 
