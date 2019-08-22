@@ -311,7 +311,7 @@
 																			</td>
 																			<input type="hidden" name="count">
 																			<td><input type="checkbox" <% if(menus[i].status == '0'){%> disabled <%} %> onchange="fun('<%= menus[i]._id%>',<%=i%>)" value="<%= menus[i]._id%>">Yes</td>
-																			<td><%= menus[i].price %></td>
+																			<td id="priceM<%=i%>"><%= menus[i].price %></td>
 																			<td><input type="number" min="1" id="count<%=i%>"value="1" class="inputBG"></td>
 																			<td>
 																				<b>Low</b>
@@ -416,7 +416,7 @@
 																				</td>
 																				<input type="hidden" name="count">
                                                                                 <td><input type="checkbox" <% if(menus[i].status == '0'){%> disabled <%} %> onchange="fun('<%= menus[i]._id%>',<%=i%>)" value="<%= menus[i]._id%>">Yes</td>
-                                                                                <td><%= menus[i].price %></td>
+                                                                                <td id="priceM<%=i%>"><%= menus[i].price %></td>
                                                                                 <td><input type="number" min="1" id="count<%=i%>"value="1" class="inputBG"></td>
                                                                                 <td>
                                                                                     <b>Low</b>
@@ -573,16 +573,16 @@
                                                                                 <img src="<%= drinks[j].imgUrl %>" alt="" class="customImg" />
                                                                                 <label><%= drinks[j].title %></label>
                                                                             </td>
-                                                                            <td>
-																					<% if(drinks[j].status == '0'){%>
-																						<a  class="btn btn-danger">Not Available</a>
-																					<%}else{%>
-																						<a  class="btn btn-success">Available</a>
-																					<%}%>
+																		                                         <td>
+																																							<% if(drinks[j].status == '0'){%>
+																																								<a  class="btn btn-danger">Not Available</a>
+																																							<%}else{%>
+																																								<a  class="btn btn-success">Available</a>
+																																							<%}%>
                                                                             </td>
-																			<td><input type="checkbox" <% if(drinks[j].status == '0'){%> disabled <%} %> onchange="fun2('<%= drinks[j]._id%>',<%=j%>)" >Yes</td>
+																																						<td><input type="checkbox" <% if(drinks[j].status == '0'){%> disabled <%} %> onchange="fun2('<%= drinks[j]._id%>',<%=j%>)" >Yes</td>
                                                                             <td id="priceD<%=j%>"><%= drinks[j].price %></td>
-																			<td><input type="number" min="1" id="countD<%=j%>" value="1" class="inputBG"></td>
+																																						<td><input type="number" min="1" id="countD<%=j%>" value="1" class="inputBG"></td>
                                                                         </tr>
                                                                 <%}%>
 
@@ -632,8 +632,8 @@
 
 			if(hr<12)
 			{
-			    $("#breakfast").show();
-                $("#lunch").hide();
+			    $("#breakfast").hide();
+                $("#lunch").show();
                 $("#dinner").hide();
 			}
 
