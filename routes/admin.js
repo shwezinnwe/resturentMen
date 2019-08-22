@@ -206,5 +206,58 @@ router.get('/home', function(req,res,next){
 
 });
 
+router.get('/daily',function (req,res) {
+  Order.aggregate(
+   [
+      {
+        $group : {
+           _id : { month: { $month: "$inserted" }, day: { $dayOfMonth: "$inserted" }, year: { $year: "$inserted" } },
+           totalPrice: { $sum: "$total" },
+           count: { $sum: 1 }
+        }
+      }
+   ]
+    ).sort({inserted:1}).exec(function (err,rtn) {
+        if(err) throw err;
+        console.log(rtn);
+        res.render('admin/daily',{order:rtn});
+      })
+})
+router.get('/monthly',function (req,res) {
+  Order.aggregate(
+   [
+      {
+        $group : {
+           _id : { month: { $month: "$inserted" }, year: { $year: "$inserted" } },
+           totalPrice: { $sum: "$total" },
+           count: { $sum: 1 }
+        }
+      }
+   ]
+    ).sort({inserted:1}).exec(function (err,rtn) {
+        if(err) throw err;
+        console.log(rtn);
+        res.render('admin/monthly',{order:rtn});
+      })
+})
+
+router.get('/yearly',function (req,res) {
+  Order.aggregate(
+   [
+      {
+        $group : {
+           _id : { year: { $year: "$inserted" } },
+           totalPrice: { $sum: "$total" },
+           count: { $sum: 1 }
+        }
+      }
+   ]
+    ).sort({inserted:1}).exec(function (err,rtn) {
+        if(err) throw err;
+        console.log(rtn);
+        res.render('admin/yearly',{order:rtn});
+      })
+})
+
 
 module.exports = router;

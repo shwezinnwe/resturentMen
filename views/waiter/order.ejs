@@ -526,7 +526,7 @@
 																	  </td>
 																	  <input type="hidden" name="count">
 																	  <td><input type="checkbox" <% if(menus[i].status == '0'){%> disabled <%} %> onchange="fun('<%= menus[i]._id%>',<%=i%>)" value="<%= menus[i]._id%>">Yes</td>
-                                                                      <td><%= menus[i].price %></td>
+                                                                      <td id="priceM<%=i%>"><%= menus[i].price %></td>
 																	  <td><input type="number" min="1" id="count<%=i%>" value="1" class="inputBG"></td>
                                                                       <td>
                                                                           <b>Low</b>
@@ -581,7 +581,7 @@
 																					<%}%>
                                                                             </td>
 																			<td><input type="checkbox" <% if(drinks[j].status == '0'){%> disabled <%} %> onchange="fun2('<%= drinks[j]._id%>',<%=j%>)" >Yes</td>
-                                                                            <td><%= drinks[j].price %></td>
+                                                                            <td id="priceD<%=j%>"><%= drinks[j].price %></td>
 																			<td><input type="number" min="1" id="countD<%=j%>" value="1" class="inputBG"></td>
                                                                         </tr>
                                                                 <%}%>
@@ -658,7 +658,7 @@
 
 		function fun(id,i){
 			var data = {};
-			Object.assign(data,{menu_id:id},{low:$('#low'+i).val()},{count:$('#count'+i).val()},{apo:$('#apo'+i).val()});
+			Object.assign(data,{menu_id:id},{low:$('#low'+i).val()},{count:$('#count'+i).val()},{apo:$('#apo'+i).val()},{amount:(Number($('#count'+i).val())* Number($('#priceM'+i).html()))});
 			var index = menu.findIndex(x => x.menu_id === id);
 			console.log('....>>>',index);
 			if (index > -1) {
@@ -671,7 +671,7 @@
 		function fun2(id,i){
 			console.log(i,$('#countD'+i).val())
 			var data2 = {};
-			Object.assign(data2,{drink_id:id},{count:$('#countD'+i).val()});
+			Object.assign(data2,{drink_id:id},{count:$('#countD'+i).val()},{amount:(Number($('#countD'+i).val())* Number($('#priceD'+i).html()))});
 			var index = drink.findIndex(x => x.drink_id === id);
 			if (index > -1){
 				drink.splice(index, 1);
@@ -687,7 +687,15 @@
 			drink : drink,
 			tnum : '<%= tnum %>'
 		}
+		var total = 0;
 		$('.btn').click(function(){
+			for (var i in menu) {
+				total += menu[i].amount
+			}
+			for (var j in drink) {
+				total += drink[j].amount
+			}
+			data.total = total;
 			$.ajax({
 				url:Url,
 				type :'POST',

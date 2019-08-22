@@ -67,6 +67,7 @@ router.post('/order',(req,res)=>{
   order.menus = req.body.menu;
   order.drinks = req.body.drink;
   order.tableNo  = req.body.tnum;
+  order.total = req.body.total;
   order.save(function (err,rtn) {
     if(err) throw err;
     console.log(rtn);

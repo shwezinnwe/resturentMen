@@ -34,7 +34,15 @@ var OrderSchema = new Schema({
   tableNo:{
     type:String,
     required: true
-  }
+  },
+  total:{
+    type:Number,
+    required: true
+  },
+  inserted:{
+     type:Date,
+     default:Date.now
+   },
 });
 
 module.exports = mongoose.model('Orders', OrderSchema)
