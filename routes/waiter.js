@@ -6,9 +6,7 @@ var Drink = require('../model/Drink');
 var Order = require('../model/Order');
 
 /* GET home page. */
-router.get('/login', function(req, res, next) {
-  res.render('waiter/login', { title: 'Express' });
-});
+
 
 router.get('/home', function(req,res,next){
   Order.find({$or:[{status:2},{status:3}]},(err,rtn)=>{
@@ -20,22 +18,12 @@ router.get('/home', function(req,res,next){
         tno.push(rtn2[i].tableNo);
       }
       console.log(tno);
-      res.render('waiter/home',{orders:rtn,tno:tno})
+      res.render('waiter/home',{orders:rtn,tno:tno,name:req.session.users.name})
     })
 
   });
 });
 
-router.post('/login', function(req,res,next){
-  Staff.findOne({$and:[{email:req.body.email},{position:"Waiter"}]},(err,staff)=>{
-    if(err) throw err;
-    if(staff != null && Staff.compare(req.body.password,staff.password)){
-      res.redirect('/waiters/home')
-    }else{
-      res.redirect('/waiters/login')
-    }
-  })
-});
 
 router.get('/taken/:id', function (req,res) {
   Order.findByIdAndUpdate(req.params.id,{$set:{status:'3'}},(err,rtn)=>{
@@ -47,7 +35,7 @@ router.get('/taken/:id', function (req,res) {
 router.get('/orderdetail/:id',(req,res)=>{
   Order.findById(req.params.id).populate('menus.menu_id').populate('drinks.drink_id').exec((err,rtn)=>{
     if(err) throw err;
-    res.render('waiter/order-detail',{order:rtn})
+    res.render('waiter/order-detail',{order:rtn,name:req.session.users.name})
   })
 })
 
@@ -56,7 +44,7 @@ router.get('/order/:tnum',(req,res)=>{
     if(err) throw err;
     Drink.find((err2,rtn2)=>{
       if(err2) throw err2;
-      res.render('waiter/order',{menus:rtn,drinks:rtn2,tnum:req.params.tnum});
+      res.render('waiter/order',{menus:rtn,drinks:rtn2,tnum:req.params.tnum,name:req.session.users.name});
     })
   })
 

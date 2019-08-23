@@ -10,29 +10,16 @@ var multer = require('multer');
 var upload = multer({ dest:'public/images/uploads'});
 
 /* GET home page. */
-router.get('/login', function(req, res, next) {
-  res.render('admin/login', { title: 'Express' });
-});
-
-router.post('/login',function(req,res,next){
-  Admin.findOne({email:req.body.email},function(err,rtn){
-    if(rtn != null && Admin.compare(req.body.password,rtn.password)){
-      res.redirect('/admins/home');
-    }else{
-      res.redirect('/admins/login');
-    }
-  });
-});
 
 router.get('/stafflist',function(req,res,next){
   Staff.find(function(err,rtn){
     if(err) throw err;
-    res.render('admin/staff/stafflist',{staffs:rtn});
+    res.render('admin/staff/stafflist',{staffs:rtn,name:req.session.users.name});
   });
 });
 
 router.get('/addstaff',function(req,res,next){
-    res.render('admin/staff/addstaff');
+    res.render('admin/staff/addstaff',{name:req.session.users.name});
 });
 
 router.post('/addstaff',function(req,res,next){
@@ -53,7 +40,7 @@ router.post('/addstaff',function(req,res,next){
 router.get('/updatestaff/:id',(req,res)=>{
   Staff.findById(req.params.id,(err,rtn)=>{
     if(err) throw err;
-    res.render('admin/staff/updatestaff',{staff:rtn})
+    res.render('admin/staff/updatestaff',{staff:rtn,name:req.session.users.name})
   });
 });
 
@@ -81,7 +68,7 @@ router.get('/deletestaff/:id',(req,res)=>{
 })
 
 router.get('/addmenu',(req,res)=>{
-  res.render('admin/menu/addmenu');
+  res.render('admin/menu/addmenu',{name:req.session.users.name});
 });
 
 router.post('/addmenu',upload.single('photo'),(req,res)=>{
@@ -101,7 +88,7 @@ router.post('/addmenu',upload.single('photo'),(req,res)=>{
 router.get('/menulist',(req,res)=>{
   Menu.find((err,rtn)=>{
     if(err) throw err;
-    res.render('admin/menu/menulist',{menus:rtn});
+    res.render('admin/menu/menulist',{menus:rtn,name:req.session.users.name});
   })
 
 })
@@ -109,7 +96,7 @@ router.get('/menulist',(req,res)=>{
 router.get('/updateMen/:id',(req,res)=>{
     Menu.findById(req.params.id,(err,rtn)=>{
       if(err) throw err;
-      res.render('admin/menu/updatemenu',{menu:rtn});
+      res.render('admin/menu/updatemenu',{menu:rtn,name:req.session.users.name});
     })
 })
 
@@ -136,7 +123,7 @@ router.get('/deleteMen/:id',(req,res)=>{
 })
 
 router.get('/adddrink',(req,res)=>{
-  res.render('admin/drink/adddrink');
+  res.render('admin/drink/adddrink',{name:req.session.users.name});
 });
 
 router.post('/adddrink',upload.single('photo'),(req,res)=>{
@@ -155,7 +142,7 @@ router.post('/adddrink',upload.single('photo'),(req,res)=>{
 router.get('/drinklist',(req,res)=>{
   Drink.find((err,rtn)=>{
     if(err) throw err;
-    res.render('admin/drink/drinklist',{drinks:rtn});
+    res.render('admin/drink/drinklist',{drinks:rtn,name:req.session.users.name});
   })
 
 })
@@ -163,7 +150,7 @@ router.get('/drinklist',(req,res)=>{
 router.get('/updateDri/:id',(req,res)=>{
   Drink.findById(req.params.id,(err,rtn)=>{
     if(err) throw err;
-    res.render('admin/drink/updatedrink',{drink:rtn});
+    res.render('admin/drink/updatedrink',{drink:rtn,name:req.session.users.name});
   })
 })
 
@@ -198,7 +185,7 @@ router.get('/home', function(req,res,next){
           if(err3) throw err3;
           Order.count({},(err4,rtn4)=>{
             if(err4) throw err4;
-            res.render('admin/home',{order:rtn4,drink:rtn3,menu:rtn2,staff:rtn});
+            res.render('admin/home',{order:rtn4,drink:rtn3,menu:rtn2,staff:rtn,name:req.session.users.name});
           })
         })
       })
@@ -220,7 +207,7 @@ router.get('/daily',function (req,res) {
     ).sort({inserted:1}).exec(function (err,rtn) {
         if(err) throw err;
         console.log(rtn);
-        res.render('admin/daily',{order:rtn});
+        res.render('admin/daily',{order:rtn,name:req.session.users.name});
       })
 })
 router.get('/monthly',function (req,res) {
@@ -237,7 +224,7 @@ router.get('/monthly',function (req,res) {
     ).sort({inserted:1}).exec(function (err,rtn) {
         if(err) throw err;
         console.log(rtn);
-        res.render('admin/monthly',{order:rtn});
+        res.render('admin/monthly',{order:rtn,name:req.session.users.name});
       })
 })
 
@@ -255,7 +242,7 @@ router.get('/yearly',function (req,res) {
     ).sort({inserted:1}).exec(function (err,rtn) {
         if(err) throw err;
         console.log(rtn);
-        res.render('admin/yearly',{order:rtn});
+        res.render('admin/yearly',{order:rtn,name:req.session.users.name});
       })
 })
 

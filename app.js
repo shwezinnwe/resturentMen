@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var session=require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -18,6 +19,12 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(session({
+      secret: '@$TuD@ntA&tte!#$%^&09,',// any string for security
+      resave: false,
+      saveUninitialized : true
+}));
+
 // mongoose.connect('mongodb+srv://shwezin:shwe123@restrms-ahkie.mongodb.net/test?retryWrites=true&w=majority');
 mongoose.connect('mongodb://127.0.0.1/restdb')
 var db = mongoose.connection;
@@ -30,6 +37,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use(function(req, res, next){
+  if(req.session.users){
+    next();
+  }else {
+    res.redirect('/');// redirect to other page
+  }
+});
 app.use('/users', usersRouter);
 app.use('/waiters', waitersRouter);
 app.use('/kitchens', kitchensRouter);

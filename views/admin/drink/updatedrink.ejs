@@ -99,11 +99,11 @@
 							<li>
 								<div class="left-custom-menu-adp-wrap comment-scrollbar">
 									<nav class="sidebar-nav left-sidebar-menu-pro">
-															
+
 										<ul class="metismenu" id="menu1">
 
 											<% include ../../partial/navbar %>
-											
+
 										</ul>
 									</nav>
 								</div>
@@ -131,7 +131,7 @@
                                 							<a class="btn dropdown-toggle" data-toggle="dropdown">
                                 								<span class="admin-name"><i class="fa fa-bars"></i></span>
                                 							</a>
-                                							
+
                                 							<ul id="listdown" role="menu" class="dropdown-menu animated zoomIn myScroll1">
 
 																<% include ../../partial/navbar %>
@@ -140,23 +140,22 @@
                                 						</div>
 	                                				</div>
 
-                        				            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 paddingReset">
-                        				                <div class="dropdown">
-                        				                    <a data-toggle="dropdown" class="btn dropdown-toggle">
-                        											<i class="fa fa-user-plus adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
-                        											<span class="admin-name">Register Here</span>
-                        											<i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
-                        									</a>
+																					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 paddingReset">
+																							<div class="dropdown">
+																									<a data-toggle="dropdown" class="btn dropdown-toggle">
+																						<i class="fa fa-user adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
+																						<span class="admin-name"><%= name %></span>
+																						<i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
+																								</a>
 
-                        				                    <ul class="dropdown-menu animated zoomIn">
-                        				                        <li><a href="/adminDB"><span class="fa fa-home author-log-ic"></span>Register</a>
-                        				                        </li>
+																									<ul class="dropdown-menu animated zoomIn">
 
-                        				                        <li><a href="/login"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
-                        				                        </li>
-                        				                    </ul>
-                        				                </div>
-                        				            </div>
+
+																											<li><a href="/logout"><span class="fa fa-lock author-log-ic"></span>Log Out</a>
+																											</li>
+																									</ul>
+																							</div>
+																					</div>
 
 				                                </div>
 				                            </div>
@@ -172,7 +171,7 @@
 				                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				                            <div class="breadcome-list">
 				                                <div class="row">
-				                                   
+
 				                                </div>
 				                            </div>
 				                        </div>
@@ -232,7 +231,7 @@
                                                                                 <option value="Appetizer" <%= (drink.category == "Appetizer")? "selected":"";  %> >Appetizer</option>
                                                                                 <option value="other" <%= (drink.category == "other")? "selected":"";  %> >Other</option>
 																			</select>
-																		</div> 
+																		</div>
 
 																		<div class="input-group mg-b-pro-edt">
 																			<span class="input-group-addon"><i class="fa fa-sticky-note-o" aria-hidden="true"></i></span>
@@ -240,7 +239,7 @@
 																				<option value="1" <%= (drink.status == "1")? "selected":"";  %>>Available</option>
 																				<option value="0" <%= (drink.status == "0")? "selected":"";  %>>Not Available</option>
 																			</select>
-																		</div> 
+																		</div>
 					                                                    <div class="input-group mg-b-pro-edt">
 					                                                    	<span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
 					                                                   		<input type="number" class="form-control" name="price" placeholder="Price" value="<%= drink.price %>">
@@ -274,11 +273,11 @@
 
 					                                        	<div class="col-lg-2 col-md-2"></div>
 					                                        </div>
-				                                           
+
 				                                    	</div>
 				                                	</form>
 
-				                                </div> 
+				                                </div>
 				                            </div>
 				                        </div>
 
@@ -293,7 +292,7 @@
 				        <div class="footer footer-copyright-area">
 				        	<div class="footer-copy-right">
 				        		<p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
-				        	</div>				        	
+				        	</div>
 				        </div>
 
 				    </div>
